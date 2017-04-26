@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+	<grants />
+	<actions>
+		<!-- admin view -->
+		<action name="dispRandocumentAdminDashboard" type="view" admin_index="true" />
+		<action name="dispRandocumentAdminInsertMid" type="view" />
+		<action name="dispRandocumentAdminDeleteMid" type="view" />
+
+		<!-- admin controller -->
+		<action name="procRandocumentAdminInsertMid" type="controller" />
+		<action name="procRandocumentAdminDeleteMid" type="controller" />
+
+		<action name="dispRandocumentRand" type="view" index="true" />
+	</actions>
+</module>

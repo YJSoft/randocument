@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="0.2">
+	<title xml:lang="ko">랜덤 게시글</title>
+	<description xml:lang="ko">랜덤게시글을 콕 찝어옵니다.</description>
+	<version>1.0</version>
+	<date>2017-04-26</date>
+	<category>content</category>
+
+	<author email_address="qw5414@naver.com" link="http://rhyboum.com/">
+		<name xml:lang="ko">BJRambo(Swhite)</name>
+	</author>
+</module>

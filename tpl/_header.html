@@ -1,0 +1,18 @@
+<div class="x_page-header">
+	<h1>
+		랜덤게시글
+	</h1>
+</div>
+
+<p id="descModule" class="x_alert x_alert-info" hidden="hidden">{$lang->about_profiler}</p>
+
+
+<ul class="x_nav x_nav-tabs">
+	<li class="x_active"|cond="$act == 'dispRandocumentAdminDashboard'">
+		<a href="{getUrl('', 'module', 'admin', 'act', 'dispRandocumentAdminDashboard')}">대쉬보드</a>
+	</li>
+	<li class="x_active"|cond="$act == 'dispRandocumentAdminInsertMid'">
+		<a href="{getUrl('', 'module', 'admin', 'act', 'dispRandocumentAdminInsertMid')}" cond="!$module_srl">MID 생성</a>
+		<a href="{getUrl('', 'module', 'admin', 'act', 'dispRandocumentAdminInsertMid')}" cond="$module_srl">MID 정보</a>
+	</li>
+</ul>

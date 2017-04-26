@@ -1,0 +1,8 @@
+<script type="text/javascript" cond="$getlink != null && $module_info->test_mode != 'yes'">
+	location.href = "{$getlink}";
+</script>
+
+<block cond="$module_info->test_mode == 'yes'">
+"{$document->getTitle()}" 게시글을 읽어들이고 있습니다.<br>
+	링크주소 : <a href="{$document->getPermanentUrl()}" target="_blank">{$document->getPermanentUrl()}</a>
+</block>

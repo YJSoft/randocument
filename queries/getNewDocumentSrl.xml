@@ -1,0 +1,18 @@
+<query id="getNewDocumentSrl" action="select">
+	<tables>
+		<table name="documents" />
+	</tables>
+	<columns>
+		<column name="document_srl" />
+	</columns>
+	<conditions>
+		<condition operation="in" column="module_srl" var="module_srls" filter="number" notnull="notnull" pipe="and" />
+		<group pipe="and">
+			<condition operation="more" column="last_update" var="duration_article" pipe="and" />
+		</group>
+	</conditions>
+	<navigation>
+		<index var="sort_index" default="documents.list_order" order="order_type" />
+		<list_count var="list_count" default="1" />
+	</navigation>
+</query>
