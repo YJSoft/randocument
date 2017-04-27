@@ -1,7 +1,7 @@
 <script type="text/javascript" cond="$getlink != null && $module_info->test_mode != 'yes'">
-	<!--@if($module_info->option_url_pc)-->
+	<!--@if(Mobile::isFromMobilePhone())-->
 		location.href = "{$getlink}{$module_info->option_url_pc}";
-	<!--@elseif(Mobile::isFromMobilePhone)-->
+	<!--@elseif($module_info->option_url_pc)-->
 		location.href = "{$getlink}{$module_info->option_url_mobile}";
 	<!--@else-->
 		location.href = "{$getlink}";

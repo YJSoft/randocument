@@ -9,7 +9,7 @@ class randocumentModel extends randocument
 		}
 
 		$args = new stdClass();
-		$args->module_srls = $this->module_info->seleted_module_srl;
+		$args->module_srls = $module_srl;
 		$args->sort_index = 'rand()';
 		$output = executeQuery('randocument.getRandocumentToDocumentSrl', $args);
 
