@@ -19,10 +19,9 @@ class randocumentView extends randocument
 			return new Object(-1, '설정을 불러 올 수 없습니다.');
 		}
 
-		$args = new stdClass();
-		$args->module_srls = $this->module_info->seleted_module_srl;
-		$args->sort_index = 'rand()';
-		$output = executeQuery('randocument.getRandocumentToDocumentSrl', $args);
+		$oRandocumentModel = getModel('randocument');
+
+		$output = $oRandocumentModel->getRandocumentToDocumentSrl($this->module_info->seleted_module_srl);
 		if(!$output->toBool())
 		{
 			return $output;
