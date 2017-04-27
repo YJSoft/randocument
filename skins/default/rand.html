@@ -1,8 +1,8 @@
 <script type="text/javascript" cond="$getlink != null && $module_info->test_mode != 'yes'">
-	<!--@if(Mobile::isFromMobilePhone())-->
-		location.href = "{$getlink}{$module_info->option_url_pc}";
-	<!--@elseif($module_info->option_url_pc)-->
+	<!--@if(Mobile::isMobileCheckByAgent())-->
 		location.href = "{$getlink}{$module_info->option_url_mobile}";
+	<!--@elseif($module_info->option_url_pc)-->
+		location.href = "{$getlink}{$module_info->option_url_pc}";
 	<!--@else-->
 		location.href = "{$getlink}";
 	<!--@end-->
@@ -10,5 +10,11 @@
 
 <block cond="$module_info->test_mode == 'yes'">
 	"{$document->getTitle()}" 게시글을 읽어들이고 있습니다.<br>
+	<!--@if(Mobile::isMobileCheckByAgent())-->
+	링크주소 : <a href="{$document->getPermanentUrl()}{$module_info->option_url_mobile}" target="_blank">{$document->getPermanentUrl()}{$module_info->option_url_mobile}</a>
+	<!--@elseif($module_info->option_url_pc)-->
+	링크주소 : <a href="{$document->getPermanentUrl()}{$module_info->option_url_pc}" target="_blank">{$document->getPermanentUrl()}{$module_info->option_url_pc}</a>
+	<!--@else-->
 	링크주소 : <a href="{$document->getPermanentUrl()}" target="_blank">{$document->getPermanentUrl()}</a>
+	<!--@end-->
 </block>
