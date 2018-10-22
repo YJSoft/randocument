@@ -26,11 +26,20 @@ class randocumentView extends randocument
 		{
 			return $output;
 		}
-
+		
 		if($output->data->document_srl)
 		{
-			$oDocument = getModel('document')->getDocument($output->data->document_srl);
+			/** @var documentModel $oDocumentModel */
+			$oDocumentModel = getModel('document');
+			$oDocument = $oDocumentModel->getDocument($output->data->document_srl);
 			$link = $oDocument->getPermanentUrl();
+			
+			$db_info = Context::getDBInfo();
+			if($db_info->use_rewrite !== 'Y')
+			{
+				$link = htmlspecialchars_decode($link);
+			}
+			
 			Context::set('getlink', $link);
 		}
 		else
