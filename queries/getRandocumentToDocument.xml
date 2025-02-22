@@ -1,4 +1,4 @@
-<query id="getRandocumentToDocumentSrl" action="select">
+<query id="getRandocumentToDocument" action="select">
 	<tables>
 		<table name="documents" />
 	</tables>
@@ -12,7 +12,7 @@
 		</group>
 	</conditions>
 	<navigation>
-		<index var="sort_index" default="documents.list_order" order="order_type" />
+		<index var="sort_index" default="rand()" order="order_type" />
 		<list_count var="list_count" default="1" />
 	</navigation>
 </query>
