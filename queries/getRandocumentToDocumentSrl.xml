@@ -12,7 +12,7 @@
 		</group>
 	</conditions>
 	<navigation>
-		<index var="sort_index" default="rand()" order="order_type" />
+		<index default="rand()" />
 		<list_count var="list_count" default="1" />
 	</navigation>
 </query>
